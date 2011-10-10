@@ -51,3 +51,21 @@ test("indicates if the item is finished", function() {
 test("indicates if the item is unfinished", function() {
     equals(this.todoItem.toString(), TodoItem.UNFINISHED_PREFIX + "Stappe studentene fulle av gratis mat");
 });
+
+
+
+module("Estimating: TodoItem", {
+	setup: function () {
+		this.todoItem = new TodoItem("Sitte på facebook");
+	}
+});
+
+test("has an estimate of 0 when created", function() {
+	equals(this.todoItem.getEstimate(), 0);
+});
+
+test("can set an estimate", function() {
+	this.todoItem.setEstimate("1.5");
+	
+	equals(this.todoItem.getEstimate(), 1.5);
+});
