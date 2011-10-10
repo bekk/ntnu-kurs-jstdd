@@ -1,0 +1,30 @@
+=== FORMÅL MED DENNE DELEN ===
+
+* Lære å skrive tester
+* Lære "syntaksen" til QUnit
+  - Lær å bruk module(), test(), ok(), same() og equals()
+* Lære å kjøre QUnit-testene
+
+
+=== VERKTØY ===
+
+* SublimeText (Windows)
+* TextMate (OSX)
+* vim/emacs/gedit (Linux)
+
+
+=== HER FINNER DU MER INFORMAJSON === 
+
+* http://docs.jquery.com/Qunit
+* http://net.tutsplus.com/tutorials/javascript-ajax/how-to-test-your-javascript-code-with-qunit/
+
+
+=== TIPS OG TRIKS ===
+
+* Hvordan åpne konsollen i nettleseren
+  - Chrome og Safari: CTRL/Command + ALT + J
+  - Firefox:
+    * Installer FireBug (https://getfirebug.com/)
+    * Åpne konsollen fra verktøylinjen (eller trykk F12 i  Windows)
+  - IE: Installer Chrome eller Firefox
+  - Opera: Les på http://operawiki.info/OperaJSConsole

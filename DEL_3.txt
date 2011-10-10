@@ -1,0 +1,14 @@
+=== KRAV TIL FUNKSJONALITET I DEL 3 ===
+
+* Det skal være mulig å legge inn et estimat på antall timer gjøremålet vil ta
+* Det skal være mulig å summere totalt antall timer for alle gjøremål i listen
+
+
+=== PÅKREVDE TESTER === 
+
+(Ikke gjør dette før testene over passerer)
+
+* Listen skal inneholde to gjøremål med hhv. 2.1 og 2.2 som estimat. Summen av disse skal være 4.3.
+	- Bruk disse verdiene i testen
+	- Hint: Metoden parseFloat(string) tar inn en streng og returnerer et desimaltall
+

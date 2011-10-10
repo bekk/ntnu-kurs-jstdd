@@ -1,0 +1,7 @@
+=== KRAV TIL FUNKSJONALITET I DEL 2 ===
+
+* Et gjøremål skal kunne markeres som utført
+* Et utført gjøremål skal kunne markeres som ikke utført
+
+* Det må være mulig å se om et gjøremål er utført eller ikke i utlistingen
+	- Tips: Denne typen logikk kan i dette tilfellet ligge i domeneobjektet

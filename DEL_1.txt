@@ -1,0 +1,37 @@
+=== KRAV TIL FUNKSJONALITET I DEL 1 ===
+
+* Opprette et gjøremål (Todo item)
+  - Skal ha en tittel
+
+* Opprette en gjøremålsliste (Todo list)
+  - Skal kunne finne ut hvor mange gjøremål som ligger i listen
+  - Skal kunne legge til gjøremål
+  - Skal kunne liste ut alle gjøremålene
+
+
+=== TIPS OG TRIKS ===
+
+* Hvordan lage et "objekt" i JavaScript
+	- Vi anbefaler i denne delen å bruke det som kalles prototypisk arv.
+	  Syntaksen ser ut som følgende:
+	
+	// Deklarer "klassen" (du kan sende med "konstruktørparametere" i funksjonen)
+	function MittObjekt() {
+		// Dette kan se på som konstruktøren.
+		// Her kan du sette instansvariabler på følgende måte:
+		this.number = 42;
+		this.message = "KTHXBYE";
+	}
+	
+	// Legge til en metode
+	MittObjekt.prototype.doStuffWithNumbers = function(number1, number2) {
+		return (number1 + number2) * this.number;
+	}; // <-- Legg merke til semikolon!
+	
+	
+	// Lage en ny instans av "klassen"
+	var minInstans = new MittObjekt();
+	minInstans.number; // >>> 42
+	minInstans.message; // >>> "KTHXBYE"
+	minInstans.doStuffWithNumbers(4,2); // >>> 252
+	
