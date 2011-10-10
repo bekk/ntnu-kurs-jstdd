@@ -31,16 +31,3 @@ test("should output a list with all the todo items", function() {
     equals(stringList[1], TodoItem.UNFINISHED_PREFIX + "Kode litt");
     equals(stringList[2], TodoItem.FINISHED_PREFIX + "Jodle på flyet til Trondheim");
 });
-
-test("should return a totalt sum of all estimates", function() {
-	var firstItem = new TodoItem("Snakke litt mere");
-	firstItem.setEstimate("2.1");
-	var secondItem = new TodoItem("Kode litt mere");
-	secondItem.setEstimate("2.2");
-	
-	var list = new TodoList();
-    list.add(firstItem);
-    list.add(secondItem);
-	
-	equals(list.getTotalEstimate(), 4.3);
-});
