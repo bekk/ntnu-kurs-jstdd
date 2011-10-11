@@ -22,7 +22,8 @@ TodoList.prototype.asStringList = function() {
 TodoList.prototype.getTotalEstimate = function() {
 	var sum = 0;
 	for (var i = 0; i < this.items.length; i++){
-		sum = ((sum* 100) + (this.items[i].getEstimate()*100))/100;
+		sum += this.items[i].getEstimate();
 	}
-	return sum;
+	
+	return sum.toPrecision(2);
 };
