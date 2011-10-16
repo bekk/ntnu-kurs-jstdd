@@ -2,7 +2,7 @@
 
 * Lære å skrive tester
 * Lære "syntaksen" til QUnit
-  - Lær å bruk module(), test(), ok(), equals() og deepEquals()
+  - Lær å bruk module(), test(), ok(), equal() og deepEqual()
 * Lære å kjøre QUnit-testene
 
 
