@@ -19,7 +19,7 @@ test("is ok", function() {
 
 
 // Oppgave 4: 
-// Sammenlign de to objektene under ved hjelp av same()
+// Sammenlign de to objektene under ved hjelp av deepEquals()
 
 var myCoins = {notes_100: 1};
 var yourCoins = {notes_100: 1};
