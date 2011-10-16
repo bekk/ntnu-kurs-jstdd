@@ -27,13 +27,13 @@ module('Objects & arrays', {
 });
 
 // Oppgave 4: 
-// Sammenlign de to objektene under ved hjelp av deepEquals()
+// Sammenlign de to objektene under ved hjelp av same()
 
 //var myCoins = {notes_100: 1};
 //var yourCoins = {notes_100: 1};
 
 test("The amount is same", function() {
-	deepEquals(this.myCoins, this.yourCoins);
+	same(this.myCoins, this.yourCoins);
 });
 
 

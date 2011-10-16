@@ -5,4 +5,3 @@
 
 * Det må være mulig å se om et gjøremål er utført eller ikke i utlistingen
 	- Tips: Denne typen logikk kan i dette tilfellet ligge i domeneobjektet
-
