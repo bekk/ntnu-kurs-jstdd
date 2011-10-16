@@ -2,20 +2,11 @@
 
 * Opprette et gjøremål (Todo item)
   - Skal ha en tittel
-    - Tips: Vi anbefaler å bruke getter-funksjoner. F.eks. getTittel();
 
 * Opprette en gjøremålsliste (Todo list)
   - Skal kunne finne ut hvor mange gjøremål som ligger i listen
   - Skal kunne legge til gjøremål
-    - Tips: Listen skal da inneholde 1 gjøremål
-  - Skal kunne generere en leselig liste med alle gjøremålene
-    - Listen skal kunne vises i JavaScript-konsollen i nettlesern.
-      >>> console.log( todoList.asStringList() );
-      Linjen over skal skrive ut noe slikt som dette:
-        * Ta eksamen
-        * Ta ferie
-        * Ta konten
-        * Repeat
+  - Skal kunne liste ut alle gjøremålene
 
 
 === TIPS OG TRIKS ===
