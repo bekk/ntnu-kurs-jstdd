@@ -13,12 +13,21 @@ test("has 1 item after adding a todo item", function() {
     equals(this.list.getCount(), 1);
 });
 
-test("should output a simple list with all todo items", function() {
-    this.list.add(new TodoItem("Snakke litt"));
-    this.list.add(new TodoItem("Kode litt"));
+test("should output a list with all the todo items", function() {
+    // Arrange
+    var list = new TodoList();
+    list.add(new TodoItem("Snakke litt"));
+    list.add(new TodoItem("Kode litt"));
 
-    var stringList = this.list.asStringList();
+    var finishedItem = new TodoItem("Jodle på flyet til Trondheim");
+    finishedItem.setFinished();
+    list.add(finishedItem);
 
-    equals(stringList[0], "Snakke litt");
-    equals(stringList[1], "Kode litt");
+    // Act
+    var stringList = list.asStringList();
+
+    // Assert
+    equals(stringList[0], TodoItem.UNFINISHED_PREFIX + "Snakke litt");
+    equals(stringList[1], TodoItem.UNFINISHED_PREFIX + "Kode litt");
+    equals(stringList[2], TodoItem.FINISHED_PREFIX + "Jodle på flyet til Trondheim");
 });
