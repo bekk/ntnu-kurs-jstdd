@@ -3,14 +3,16 @@ module("42");
 // Oppgave 1:
 // Skriv en test som verifiserer at 1 + 41 = 42 ved hjelp av ok()
 test("is ok", function() {
-    // Arrange
-    // Act
-    // Assert
+    var sum = 1 + 41;
+	ok(sum == 42);
 });
 
 // Oppgave 2
 // Skriv en test som verifiserer at 1 + 41 = 42 ved hjelp av equal()
-
+test("is equal", function() {
+	var sum = 1 + 41;
+	equal(sum, 42);
+});
 
 // Vi har laget en modul her. Dette medfører at alle testene under denne kodelinjen
 // vil tilhøre modulen. Dette vil vises i testkjøreren ved at navnet på modulen
@@ -25,6 +27,10 @@ module("Objects & arrays");
 
 var myCoins = {notes_100: 1};
 var yourCoins = {notes_100: 1};
+
+test("The amount is same", function() {
+	deepEqual(myCoins, yourCoins);
+});
 
 
 // Her har vi laget en ferdig modul med setup-kode.
@@ -43,3 +49,6 @@ module("Objects & arrays with setup-method", {
 
 // Oppgave 4:
 // Sammenlign myCoins og yourCoins med equal()
+test("The amount is again the same", function() {
+	equal(this.myCoins.notes_100, this.yourCoins.notes_100);
+});
