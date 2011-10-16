@@ -11,7 +11,7 @@ test("is ok", function() {
 // Skriv en test som verifiserer at 1 + 41 = 42 ved hjelp av equal()
 test("is equal", function() {
 	var sum = 1 + 41;
-	equals(sum, 42);
+	equal(sum, 42);
 });
 
 
@@ -52,5 +52,5 @@ module("Objects & arrays with setup-method", {
 // Sammenlign myCoins og yourCoins med equal()
 
 test("The amount is again the same", function() {
-	equals(this.myCoins.notes_100, this.yourCoins.notes_100);
+	equal(this.myCoins.notes_100, this.yourCoins.notes_100);
 });
