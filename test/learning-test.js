@@ -33,7 +33,7 @@ module('Objects & arrays', {
 //var yourCoins = {notes_100: 1};
 
 test("The amount is same", function() {
-	same(this.myCoins, this.yourCoins);
+	deepEquals(this.myCoins, this.yourCoins);
 });
 
 
