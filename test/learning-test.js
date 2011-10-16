@@ -9,7 +9,7 @@ test("is ok", function() {
 });
 
 // Oppgave 2
-// Skriv en test som verifiserer at 1 + 41 = 42 ved hjelp av equals()
+// Skriv en test som verifiserer at 1 + 41 = 42 ved hjelp av equal()
 
 
 // Vi har laget en modul her. Dette medfører at alle testene under denne kodelinjen
@@ -21,7 +21,7 @@ test("is ok", function() {
 module("Objects & arrays");
 
 // Oppgave 3:
-// Sammenlign de to objektene under ved hjelp av deepEquals()
+// Sammenlign de to objektene under ved hjelp av deepEqual()
 
 var myCoins = {notes_100: 1};
 var yourCoins = {notes_100: 1};
@@ -42,4 +42,4 @@ module("Objects & arrays with setup-method", {
 });
 
 // Oppgave 4:
-// Sammenlign myCoins og yourCoins med equals()
+// Sammenlign myCoins og yourCoins med equal()
