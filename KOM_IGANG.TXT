@@ -2,7 +2,7 @@
 
 * Lære å skrive tester
 * Lære "syntaksen" til QUnit
-  - Lær å bruk module(), test(), ok(), same() og equals()
+  - Lær å bruk module(), test(), ok(), equal() og deepEqual()
 * Lære å kjøre QUnit-testene
 
 
@@ -16,8 +16,6 @@
 === HER FINNER DU MER INFORMAJSON === 
 
 * http://docs.jquery.com/Qunit
-* http://net.tutsplus.com/tutorials/javascript-ajax/how-to-test-your-javascript-code-with-qunit/
-
 
 === TIPS OG TRIKS ===
 

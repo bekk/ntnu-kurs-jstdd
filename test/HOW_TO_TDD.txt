@@ -1,0 +1,28 @@
+De to reglene som gjelder for TDD:
+1) Ikke skriv produksjonskode uten at det finnes en feilende test
+2) Eliminer all duplikasjon
+
+Enkelt? Tja... Det er kanskje ikke fullt så åpenbart hvordan man begynner.
+
+Det første du gjør er å tenke ut hva det neste du skal gjøre er. Del problemet opp i små
+håndterbare biter. Altså, * finn en ny bit med funksjonalitet som skal lages *
+
+Du har funnet ut at "når du summerer 2 og 2, så skal summen være 4" eller at
+"når jeg legger til et produkt i handlekurven så skal antall produkter i handlekurven være lik 1"
+Hver av de testene er i seg selv små og testbare. Jo mindre funksjonalitet du tester, jo lettere
+er det å skrive en test. Så, * tenk ut det enkleste scenarioet som kan løses, og ikke tenk på edge case (ennå) *
+
+Når du skriver testen, så er det vanligvis 3 deler. Den første delen kalles "Arrange" og er hvor du setter opp
+variabler og slikt som brukes i testen. Neste del kalles "Act" og er hvor du kaller koden som skal testes.
+Den siste (og viktigste) biten kalles "Assert" og er der du sjekker at resultatet eller tilstanden er riktig.
+
+Når du endelig har skrevet en test som feiler, så kan du begynne å skrive koden for å få testen til å passere.
+I det øyeblikket testen passerer er det på tide å gjøre koden bedre. Kanskje tok du noen snarveier for å bli ferdig,
+eller så ser du et mønster i koden som du kan gjøre noe med. Fiks dette opp når du har grønne tester, og test koden
+etter hver lille endring du gjør. På den måten vet du at koden din fortsatt fungerer.
+
+Gratulerer! Du er nå i gang med flyten RED, GREEN, REFACTOR.
+Kort oppsummert:
+RED: Skriv en test som skal bruke funksjonaliteten du vil lage, og se at denne feiler
+GREEN: Skriv produksjonskode som gjør at testen blir grønn på den ENKLESTE MULIGE MÅTEN
+REFACTOR: Elimimner all duplisering og/eller forbedre koden i små steg samtidig som du passer på at testene fremdeles er grønne for hver endring
