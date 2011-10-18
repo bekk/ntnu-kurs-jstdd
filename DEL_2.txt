@@ -3,5 +3,13 @@
 * Et gjøremål skal kunne markeres som utført
 * Et utført gjøremål skal kunne markeres som ikke utført
 
-* Det må være mulig å se om et gjøremål er utført eller ikke i utlistingen
+* Det må være mulig å se om et gjøremål er utført eller ikke i den leselige utlistingen fra del1.
 	- Tips: Denne typen logikk kan i dette tilfellet ligge i domeneobjektet
+	- Listen skal kunne vises i JavaScript-konsollen i nettlesern.
+      >>> console.log( todoList.asStringList() );
+      Linjen over skal skrive ut noe slikt som dette:
+        (X) Ta eksamen
+        (X) Ta ferie
+        ( ) Ta konten
+        ( ) Repeat
+
