@@ -10,10 +10,11 @@ TodoList.prototype.add = function(todoItem) {
     this.items.push(todoItem);
 };
 
-TodoList.prototype.asStringList = function() {
-    var output = [];
+TodoList.prototype.asFormattedList = function() {
+    var output = "";
     for (var i = 0; i < this.items.length; i++) {
-        output.push(this.items[i].getTitle());
+        output += this.items[i].toString();
+        output += "\n";
     }
 
     return output;

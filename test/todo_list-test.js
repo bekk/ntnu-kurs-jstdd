@@ -5,20 +5,39 @@ module("TodoList", {
 });
 
 test("has 0 items after being created", function() {
-    equals(this.list.getCount(), 0);
+    equal(this.list.getCount(), 0);
 });
 
 test("has 1 item after adding a todo item", function() {
     this.list.add(new TodoItem("Bestille pizza"));
-    equals(this.list.getCount(), 1);
+    equal(this.list.getCount(), 1);
 });
 
-test("should output a simple list with all todo items", function() {
-    this.list.add(new TodoItem("Snakke litt"));
-    this.list.add(new TodoItem("Kode litt"));
+module("Pretty printing: TodoList", {
+    setup: function() {
+        this.list = new TodoList();
+    }
+});
 
-    var stringList = this.list.asStringList();
+test("with 1 item returns that item in the output", function() {
+    var todoItem = new TodoItem("Snakke litt");
+    this.list.add(todoItem);
 
-    equals(stringList[0], "Snakke litt");
-    equals(stringList[1], "Kode litt");
+    var output = this.list.asFormattedList();
+
+    ok( output.startsWith(todoItem.toString()) );
+});
+
+test("with multiple items returns all items in the output", function() {
+    var snakkeItem = new TodoItem("Snakke litt");
+    var kodeItem = new TodoItem("Kode litt");
+
+    this.list.add(snakkeItem);
+    this.list.add(kodeItem);
+
+    var output = this.list.asFormattedList();
+    console.log(output);
+
+    ok( output.contains(snakkeItem.toString()) );
+    ok( output.contains(kodeItem.toString()) );
 });

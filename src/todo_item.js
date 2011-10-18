@@ -5,3 +5,7 @@ function TodoItem (title) {
 TodoItem.prototype.getTitle = function() {
 	return this.title;
 };
+
+TodoItem.prototype.toString = function() {
+    return this.getTitle();
+};
