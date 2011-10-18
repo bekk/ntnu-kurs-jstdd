@@ -1,6 +1,7 @@
 function TodoItem (title) {
 	this.title = title;
 	this.finished = false;
+	this.estimate = 0;
 }
 
 TodoItem.FINISHED_PREFIX = "(X) ";
@@ -32,4 +33,12 @@ TodoItem.prototype.getPrefix = function() {
 
 TodoItem.prototype.toString = function() {
     return this.getPrefix() + this.title;
+};
+
+TodoItem.prototype.getEstimate = function() {
+	return this.estimate;
+};
+
+TodoItem.prototype.setEstimate = function(stringEstimate) {
+	this.estimate = parseFloat(stringEstimate);
 };

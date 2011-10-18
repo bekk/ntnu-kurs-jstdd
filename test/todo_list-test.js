@@ -65,3 +65,33 @@ test("with one finished item should start with finished prefix", function() {
     // Assert
     ok( output.startsWith(TodoItem.FINISHED_PREFIX) );
 });
+
+module("Estimates: TodoList");
+
+test("with no items has an estimate of 0", function() {
+    var list = new TodoList();
+    equal(list.getTotalEstimate(), 0);
+});
+
+test("with 1 items with an estimate of 42 return a total sum of 42", function() {
+    var theAnswer = new TodoItem("Fourty-two");
+	theAnswer.setEstimate("42");
+
+    var list = new TodoList();
+    list.add(theAnswer);
+    equal(list.getTotalEstimate(), 42);
+});
+
+test("should return a totalt sum of all estimates", function() {
+	var firstItem = new TodoItem("Snakke litt mer");
+	firstItem.setEstimate("2.1");
+	var secondItem = new TodoItem("Kode litt mer");
+	secondItem.setEstimate("2.2");
+	
+	var list = new TodoList();
+    list.add(firstItem);
+    list.add(secondItem);
+	
+	equal(list.getTotalEstimate(), 4.3);
+});
+

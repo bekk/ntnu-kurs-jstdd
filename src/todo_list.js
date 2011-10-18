@@ -19,3 +19,12 @@ TodoList.prototype.asFormattedList = function() {
 
     return output;
 };
+
+TodoList.prototype.getTotalEstimate = function() {
+	var sum = 0;
+	for (var i = 0; i < this.items.length; i++){
+		sum += this.items[i].getEstimate();
+	}
+	
+	return sum.toPrecision(2);
+};
