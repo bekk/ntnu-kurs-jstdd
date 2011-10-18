@@ -2,11 +2,21 @@
 
 * Opprette et gjøremål (Todo item)
   - Skal ha en tittel
+    - Tips: Vi anbefaler å bruke getter-funksjoner. F.eks. getTittel();
 
 * Opprette en gjøremålsliste (Todo list)
   - Skal kunne finne ut hvor mange gjøremål som ligger i listen
   - Skal kunne legge til gjøremål
-  - Skal kunne liste ut alle gjøremålene
+    - Tips: Listen skal da inneholde 1 gjøremål
+  - Skal kunne lage en pent formatert liste av alle gjøremålene
+    - Tips #1: Vi har lagt til en funksjon kalt "contains" på String-objektet. Sjekk test/test_helpers.js
+    - Tips #2: Skriv ut resultatet av funksjonen til konsollen i testen. Da får du se
+               hvordan listen din ser ut.
+    - Resultatet kan f.eks. skrives til konsollen, og kan da se ut som dette:
+         * Ta eksamen
+         * Ta ferie
+         * Ta konten
+         * Repeat
 
 
 === TIPS OG TRIKS ===
