@@ -82,16 +82,16 @@ test("with 1 items with an estimate of 42 return a total sum of 42", function() 
     equal(list.getTotalEstimate(), 42);
 });
 
-test("should return a totalt sum of all estimates", function() {
+test("should return a total sum of all estimates", function() {
 	var firstItem = new TodoItem("Snakke litt mer");
 	firstItem.setEstimate("2.1");
 	var secondItem = new TodoItem("Kode litt mer");
 	secondItem.setEstimate("2.2");
-	
+
 	var list = new TodoList();
     list.add(firstItem);
     list.add(secondItem);
-	
+
 	equal(list.getTotalEstimate(), 4.3);
 });
 
