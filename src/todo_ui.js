@@ -44,19 +44,10 @@ $(function() { // jQuery's onDocumentReady - Loads when the DOM is ready
         // Tøm listen
         listElement.empty();
 
+        // List ut alle elementene
         $.each(todoList.items, function(index, todoItem) {
             var todoItemTitle = todoItem.getTitle();
-
-            var checked = todoItem.isFinished() ? "checked" : "";
-            var checkBox = $('<input type="checkbox" '+ checked +'/>');
-            
-            checkBox.change(function(e) {
-                if(this.checked) {
-                    todoItem.setFinished();
-                } else {
-                    todoItem.setUnfinished();
-                }
-            });
+            var checkBox = createCheckboxForTodoItem(todoItem);
 
             listElement.append(
                 $('<li/>')
@@ -65,5 +56,20 @@ $(function() { // jQuery's onDocumentReady - Loads when the DOM is ready
                     .wrapInner($('<label/>'))
             )
         });
+    }
+
+    function createCheckboxForTodoItem(todoItem) {
+        var checked = todoItem.isFinished() ? "checked" : "";
+
+        var checkbox = $('<input type="checkbox" ' + checked + '/>')
+            .change(function(e) { // Event-handler som håndterer at brukeren trykker på checkboxen
+                if (this.checked) {
+                    todoItem.setFinished();
+                } else {
+                    todoItem.setUnfinished();
+                }
+            });
+
+        return checkbox;
     }
 });
